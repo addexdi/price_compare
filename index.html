@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+<head><link rel="dns-prefetch" href="//google-analytics.com" /><link rel="dns-prefetch" href="//www.pricetree.com" /><link rel="dns-prefetch" href="//pagead2.googlesyndication.com" /><link rel="dns-prefetch" href="//img.pricetree.com" /><link rel="search" href="http://www.pricetree.com/opensearchdescription.xml" type="application/opensearchdescription+xml" title="PriceTree" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="robots" content="INDEX,FOLLOW" /><meta name="author" content="www.pricetree.com" /><meta name="dcterms.rightsHolder" content="PriceTree, Copyright (c) 2016" /><meta name="revisit-after" content="1 day" /><meta name="rating" content="general" /><meta name="google-site-verification" content="cZK5f2C7uBjxSwU3hRh6B462oTXKXJj9kINbmxbt6q4" /><meta name="alexaVerifyID" content="oqtxtnkxAlvUsnyv87Pkz-GQ5es" /><meta name="msvalidate.01" content="CDF916BE0773508A82AEFF526FE8EE36" /><meta property="og:site_name" content="PriceTree | A Price Comparison Site" /><meta property="fb:app_id" content="476028322471149" /><meta name="twitter:card" content="app" /><meta name="twitter:description" content="App Download Implementation through Twitter AppCard" /><meta name="twitter:app:country" content="in" /><meta name="twitter:app:name:googleplay" content="PriceTree Price Comparison App" /><meta name="twitter:app:id:googleplay" content="com.pricetree.android" /><meta name="twitter:app:url:googleplay" content="https://play.google.com/store/apps/details?id=com.pricetree.android" /><link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/efcjihbihnlomknaonloifnbnlfpngli" /><link href="styles/StyleSheets.css?v=11.2.1" rel="stylesheet" type="text/css" /><link rel="icon" type="image/png" href="http://img.pricetree.com/comman/pricetree-favicon.png" /><link rel="apple-touch-icon" sizes="144x144" href="http://img.pricetree.com/comman/pricetree-144.png" /><link rel="apple-touch-icon" sizes="114x114" href="http://img.pricetree.com/comman/pricetree-114.png" /><link rel="apple-touch-icon" sizes="72x72" href="http://img.pricetree.com/comman/pricetree-72.png" /><link rel="apple-touch-icon" sizes="57x57" href="http://img.pricetree.com/comman/pricetree-57.png" /><link rel="apple-touch-icon" href="http://img.pricetree.com/comman/pricetree-128.png" />	
+<script src="http://img.pricetree.com/jquery-2.1.1.min.js"></script>
+<script type="application/ld+json">{ "@context" : "http://schema.org","@type" : "Organization","name" : "PriceTree","url" : "http://www.pricetree.com","logo": "http://img.pricetree.com/pricetree.jpg","sameAs" : [ "http://www.facebook.com/pricetree","http://www.twitter.com/price_tree","https://plus.google.com/+Pricetree"]}</script>
+
+<meta name="description" content="eCommerce Price comparison API for website and app. Integrate shopping comparison api to access product and price from Flipkart, Snapdeal, Amazon and eBay and more." />
+<meta name="keywords" content="price comparison api, shopping comparison api" />
+<style>.language-list{margin-top:50px;line-height:50px}.language-list a{background:#EEE;padding:5px 10px;border-radius:2px;float:right;margin-right:10px}.table-bordered{border:1px solid #ddd;border-collapse:separate;border-left:0;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.table-bordered td,.table-bordered th{border-left:1px solid #ddd}.table-bordered caption+tbody tr:first-child td,.table-bordered caption+tbody tr:first-child th,.table-bordered caption+thead tr:first-child th,.table-bordered colgroup+tbody tr:first-child td,.table-bordered colgroup+tbody tr:first-child th,.table-bordered colgroup+thead tr:first-child th,.table-bordered tbody:first-child tr:first-child td,.table-bordered tbody:first-child tr:first-child th,.table-bordered thead:first-child tr:first-child th{border-top:0}.table-bordered tbody:first-child tr:first-child>td:first-child,.table-bordered tbody:first-child tr:first-child>th:first-child,.table-bordered thead:first-child tr:first-child>th:first-child{-webkit-border-top-left-radius:4px;border-top-left-radius:4px;-moz-border-radius-topleft:4px}.table-bordered tbody:first-child tr:first-child>td:last-child,.table-bordered tbody:first-child tr:first-child>th:last-child,.table-bordered thead:first-child tr:first-child>th:last-child{-webkit-border-top-right-radius:4px;border-top-right-radius:4px;-moz-border-radius-topright:4px}.table-bordered tbody:last-child tr:last-child>td:first-child,.table-bordered tbody:last-child tr:last-child>th:first-child,.table-bordered tfoot:last-child tr:last-child>td:first-child,.table-bordered tfoot:last-child tr:last-child>th:first-child,.table-bordered thead:last-child tr:last-child>th:first-child{-webkit-border-bottom-left-radius:4px;border-bottom-left-radius:4px;-moz-border-radius-bottomleft:4px}.table-bordered tbody:last-child tr:last-child>td:last-child,.table-bordered tbody:last-child tr:last-child>th:last-child,.table-bordered tfoot:last-child tr:last-child>td:last-child,.table-bordered tfoot:last-child tr:last-child>th:last-child,.table-bordered thead:last-child tr:last-child>th:last-child{-webkit-border-bottom-right-radius:4px;border-bottom-right-radius:4px;-moz-border-radius-bottomright:4px}.table-bordered tfoot+tbody:last-child tr:last-child td:first-child{-webkit-border-bottom-left-radius:0;border-bottom-left-radius:0;-moz-border-radius-bottomleft:0}.table-bordered tfoot+tbody:last-child tr:last-child td:last-child{-webkit-border-bottom-right-radius:0;border-bottom-right-radius:0;-moz-border-radius-bottomright:0}.table-bordered caption+tbody tr:first-child td:first-child,.table-bordered caption+thead tr:first-child th:first-child,.table-bordered colgroup+tbody tr:first-child td:first-child,.table-bordered colgroup+thead tr:first-child th:first-child{-webkit-border-top-left-radius:4px;border-top-left-radius:4px;-moz-border-radius-topleft:4px}.table-bordered caption+tbody tr:first-child td:last-child,.table-bordered caption+thead tr:first-child th:last-child,.table-bordered colgroup+tbody tr:first-child td:last-child,.table-bordered colgroup+thead tr:first-child th:last-child{-webkit-border-top-right-radius:4px;border-top-right-radius:4px;-moz-border-radius-topright:4px}.table-bordered td,.table-bordered th{padding:8px;line-height:20px;text-align:left;vertical-align:top;border-top:1px solid #ddd}.table-bordered{width:100%}</style>
+<title>
+	Price Comparison API & Widget | PriceTree
+</title></head>
+<body class="pricetree">
+    <div id="hero-banner-main">
+        <nav class="header-wrapper pricetree">
+            <div class="grid" style="margin: auto;">
+                <div class="row">
+                    <div class="span4">
+                        <a title="PriceTree" href="/" id="logo"><img title="PriceTree" src="//img.pricetree.com/comman/pricetree-logo-white.png" /></a>
+                    </div>
+                    <div class="span21 text-center c-menu">
+                        <ul class="b-menu">
+                            <li class="b-menu-item">
+                                <a href="#" data-jq-dropdown="#jq-dropdown-categories">
+                                    <span itemprop="name">Categories</span>
+                                    <svg class="b-big-menu-toggle" id="big-menu-toggle" width="25px" height="25px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                        <g stroke="#FFFFFF" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <circle opacity="0.6" cx="13" cy="13" r="12"></circle>
+                                            <path d="M8.5,9.5 L17.5,9.5" stroke-linecap="round"></path>
+                                            <path d="M8.5,13.5 L17.5,13.5" stroke-linecap="round"></path>
+                                            <path d="M8.5,17.5 L17.5,17.5" stroke-linecap="round"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="b-menu-item " itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                                <a href="/price-drops.aspx" itemprop="url">
+                                    <span itemprop="name">Price Drops
+                                    </span><sup class="small new">New</sup>
+                                </a>
+                                
+                            </li>
+                            <li class="b-menu-item " itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                                <a href="/coupons.aspx" itemprop="url">
+                                    <span itemprop="name">Coupons</span>
+                                </a>
+                            </li>
+                            <li class="b-menu-item">
+                                <a href="#" data-jq-dropdown="#jq-dropdown-apps">
+                                    <span>Apps</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24" enable-background="new 0 0 24 24" style="width: 14px; float: right; height: 3pc; margin-left: 0.5rem; fill: white;">
+                                        <path style="text-indent: 0; text-align: start; line-height: normal; text-transform: none; block-progression: tb; -inkscape-font-specification: Bitstream Vera Sans" d="M 3.71875 7.78125 L 2.28125 9.21875 L 11.28125 18.21875 L 12 18.90625 L 12.71875 18.21875 L 21.71875 9.21875 L 20.28125 7.78125 L 12 16.0625 L 3.71875 7.78125 z" color="#000" overflow="visible" enable-background="accumulate" font-family="Bitstream Vera Sans"></path>
+                                    </svg>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="span4 text-right">
+                        <ul class="d-menu">
+                            <li id="signedin" class="d-menu-item" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                                <a href="/signin.aspx" itemprop="url">
+                                    <span itemprop="name">Signin</span>
+                                </a>
+                            </li>
+                            <li class="d-menu-item" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                                <a href="/add-store.aspx" itemprop="url">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 5 5" enable-background="new 0 0 24 24" style="width: 14px; float: left; height: 3pc; margin-right: 0.5rem; fill: white;">
+                                        <path style="text-indent: 0; text-align: start; line-height: normal; text-transform: none; block-progression: tb; -inkscape-font-specification: Bitstream Vera Sans" d="M2 1 h1 v1 h1 v1 h-1 v1 h-1 v-1 h-1 v-1 h1 z" color="#000" overflow="visible" enable-background="accumulate" font-family="Bitstream Vera Sans"></path>
+                                    </svg>
+                                    <span itemprop="name">Add Store</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </nav>
+
+
+        
+    </div>
+    <form method="post" action="price-comparison-api.aspx" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjEwNDQyMTMxMw9kFgJmD2QWAgIFDw8WAh4HVmlzaWJsZWhkZGTkYLpd4PcpHOLwb7ttlyjh9t28+A8ltYbIUFQayTeoKw==" />
+</div>
+
+        
+<div class="pricetree">
+<div class="page-region">
+<div class="page-region-content">
+<div class="grid">
+<div class="row text-center">
+    <h1 style="font-size:24pt;">Price Comparison API</h1>
+    <h3>Access thousands of online store products and prices information to integrate with your website, blog or app.</h3>
+    </div>
+    <div class="row">
+    <div class="row offwhite-bg">
+        <div class="span7">
+            <div class="login">
+              <section class="h3">api Key*</section>
+              <input id="api_key" type="text" class="login-input" placeholder="api Key" value="7770AD31-382F-4D32-8C36-3743C0271699" />
+              <section class="h3">input Type*</section>
+              <select id="input_type" class="login-input">
+                  <option selected="selected" value="0">pricetreeId</option>
+                  <option value="1">storeUri</option>
+                  <option value="3">isbn</option>
+              </select>
+              <section class="h3">input Value*</section>
+              <input id="input_value" type="text" class="login-input" placeholder="input value" />
+              <section class="h3">offset(record return)</section>
+              <input id="offset" type="text" class="login-input" placeholder="offset" />
+              <a id="api-test" onclick="testApi()" class="tree-button" >Test my API</a>
+                <p><strong>JSfiddle Examples</strong></p>
+                <ul>
+                    <li>Jquery Demo : <a target="_blank" rel="external nofollow" href="http://jsfiddle.net/zkkeLaku/2/">http://jsfiddle.net/zkkeLaku/2/</a></li>
+                </ul>
+            </div>
+        </div>    
+       
+           <div class="span7">
+                <div class="language-list">
+                    <a data-target="tabs-7" href="javascript:void(0);">C#</a>
+                    <a data-target="tabs-6" href="javascript:void(0);">Ruby</a>
+                    <a data-target="tabs-5" href="javascript:void(0);">Python</a>
+                    <a data-target="tabs-4" href="javascript:void(0);">PHP</a>
+                    <a data-target="tabs-3" href="javascript:void(0);">Node</a>
+                    <a data-target="tabs-2" href="javascript:void(0);">Jquery</a>
+                    <a data-target="tabs-1" href="javascript:void(0);">Curl</a>
+                </div>
+<div class="span7" style="float:left;margin-top:10px;background:#F5F5F5;display: block;padding: 9.5px;border-radius: 4px;border: 1px solid #CCC;">
+           
+<pre id="tabs-1" class="tabs-container">
+curl --include --request GET "http://www.pricetree.com/dev/api.ashx?pricetreeId=11072&apikey=7770AD31-382F-4D32-8C36-3743C0271699"
+</pre>
+
+<pre id="tabs-2" class="tabs-container">
+&lt;script src="http://code.jquery.com/jquery-1.10.1.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+function priceTreeCallback(data) {
+    // do something with the data
+}
+$.ajax({
+   "url":"http://www.pricetree.com/dev/api.ashx?pricetreeId=11072&apikey=7770AD31-382F-4D32-8C36-3743C0271699",
+   "crossDomain":true,
+   "dataType":"jsonp"
+});
+&lt;/script&gt;
+</pre>
+
+<pre id="tabs-3" class="tabs-container">
+var request = require("request");
+
+request("http://www.pricetree.com/dev/api.ashx?pricetreeId=11072&apikey=7770AD31-382F-4D32-8C36-3743C0271699", 
+function(err, response, body) {
+  console.log(body);
+});
+</pre>
+
+<pre id="tabs-4" class="tabs-container">
+&lt;?php
+$request = "http://www.pricetree.com/dev/api.ashx?pricetreeId=11072&apikey=7770AD31-382F-4D32-8C36-3743C0271699";
+$response = file_get_contents($request);
+$results = json_decode($response, TRUE);
+?&gt;
+</pre>
+
+<pre id="tabs-5" class="tabs-container">
+import json
+import urllib
+
+results = json.load(urllib.urlopen("http://www.pricetree.com/dev/api.ashx?pricetreeId=11072&apikey=7770AD31-382F-4D32-8C36-3743C0271699"))
+</pre>
+
+<pre id="tabs-6" class="tabs-container">
+require 'rest_client'
+response = RestClient.get 'http://www.pricetree.com/dev/api.ashx?pricetreeId=11072&apikey=7770AD31-382F-4D32-8C36-3743C0271699'
+</pre>
+
+<pre id="tabs-7" class="tabs-container">
+HttpResponseMessage response = await client.GetAsync("http://www.pricetree.com/dev/api.ashx?pricetreeId=11072&apikey=7770AD31-382F-4D32-8C36-3743C0271699");
+
+if (response.IsSuccessStatusCode)
+{
+    priceComparisonList item = await response.Content.ReadAsAsync<Product>();
+    Console.WriteLine("{0}\t${1}\t{2}", item.PriceTree_Id, item.Seller_Name, item.Best_Price);
+}
+</pre>
+</div>
+        </div>    
+    </div>
+    <div class="row">
+        <textarea id="logs" spellcheck="false" class="hidden" style="width:100%;height:220px;background: none repeat scroll 0% 0% #FFF3A5;border:1px solid #ddd;">
+
+        </textarea>
+    </div>
+    <div class="grid">
+    <div class="row">
+   
+        <iframe src="//www.slideshare.net/slideshow/embed_code/41208142" width="550" height="450" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+   
+        <iframe width="550" height="450" src="//www.youtube.com/embed/MEpHQNt_R2Y" frameborder="0" allowfullscreen></iframe>
+   
+    </div>
+    </div>
+    <div class="grid">
+    <div class="row">
+        <h3>Input parameters and details</h3>
+        <table class="table-bordered">
+            <thead>
+                <tr>
+                  <th style="width:200px;">Parameter Name</th>
+                  <th style="width:250px;">Data type and Sample value</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+            <tbody>
+            <tr>
+                <th>
+                    api_key
+                </th>
+                <td>
+                    A unique key for all users
+                </td>
+                <td>
+                    The api_key parameter specifies your developer key, an alphanumeric string that uniquely identifies the application making an API request.
+                </td>
+            </tr>
+               <tr>
+                <th>
+                  input type and value(priceTreeId, storeUri, isbn)
+                </th>
+                <td>
+                    <p>Examples</p>
+                    <p>priceTreeId=10822</p>
+                    <p>storeUri=http://www.flipkart.com/samsung-galaxy-s4-i9500/p/itmdv6f4bazcv86p?pid=MOBDK7U9FFPUAGPZ</p>
+                    <p>isbn=9788129124913</p>
+                </td>
+                <td>
+                    Currently, we support 3 input format. 
+                    <p>PriceTreeId is a unique identifier for each <a href="http://www.pricetree.com/add-listing.aspx"> product listed on PriceTree</a>. e.g 10822 for <a href="http://www.pricetree.com/mobile/samsung-galaxy-s4-price-10822"> Samsung Galaxy S4</a></p>
+                    <p>storeUri is the url of product you want to search for price comparison. E.g "http://www.flipkart.com/samsung-galaxy-s4-i9500/p/itmdv6f4bazcv86p?pid=MOBDK7U9FFPUAGPZ" is the URL for Samsung Galaxy S4 on Flipkart.com </p>
+                    <p>isbn(International Standard Book Number) is unique number for <a href="http://www.pricetree.com/book/102">all books</a> and can be used for books search only.</p>
+                </td>
+                </tr>
+                <tr>
+                <th>
+                  offset  
+                </th>
+                <td>
+                    int (e.g 10, 20, 50)
+                </td>
+                <td>
+                    A maximum number of record to be returned for an API call.
+                </td>
+                </tr>
+           </tbody>
+        </table>
+    </div>
+    </div>
+    <div class="grid">
+    <div class="row">
+        <h3>Output parameters, data type and details</h3>
+        <table class="table-bordered">
+            <thead>
+                <tr>
+                  <th style="width:200px;">Parameter Name</th>
+                  <th style="width:250px;">Data type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+            <tbody>
+            <tr>
+                <th>status_code</th>
+                <td>a HTTP code(200, 404 ..) [int]</td>
+                <td>A standard HTTP code for all API request to provide information about the status of request. <a target="_blank" rel="nofollow" href="https://support.google.com/webmasters/answer/40132?hl=en"> See more about HTTP status code here</a></td>
+            </tr>
+                <tr>
+                <th>status_message</th>
+                <td>message (Success, Fail ..) [String]</td>
+                <td>A user friendly message for all request to provide information about the status of request.</td>
+            </tr>
+                <tr>
+                <th>count</th>
+                <td>total records[int]</td>
+                <td>Count of total sellers(Including variants and out of stock) available for that product</td>
+            </tr>
+                <tr>
+                <th>PriceTree_Id</th>
+                <td>[int]</td>
+                <td>The unique id represent a product on <a href="http://www.pricetree.com"> PriceTree website</a></td>
+            </tr>
+                <tr>
+                <th>Seller_Name</th>
+                <td>Name of the online stores[String]</td>
+                <td>For example (Flipkart, Snapdeal, eBay, Amazon etc..)</td>
+            </tr>
+                <tr>
+                <th>Best_Price</th>
+                <td>[Numeric]</td>
+                <td>Best price of product on particular store</td>
+            </tr>
+             <tr>
+                <th>In_Stock</th>
+                <td>[String]</td>
+                <td>Yes or No: Based on whether item is available on site or not.</td>
+            </tr>
+                <tr>
+                <th>Product_Name</th>
+                <td>[String]</td>
+                <td>The name of product as on seller's  website.</td>
+            </tr>
+                <tr>
+                <th>Product_Color</th>
+                <td>[String]</td>
+                <td>The color of product as on sellers website</td>
+            </tr>
+                <tr>
+                <th>Uri</th>
+                <td>[String]</td>
+                <td>The URL of sellers product(landing page) for particular product
+                <p><strong>Note</strong>: All Free API users don't have access of stores url, instead a PriceTree redirection url is served</p>
+                </td>
+            </tr>
+           </tbody>
+        </table>
+    </div>
+    </div>
+    <div class="grid">
+    <div class="row">
+        <div class="typeform-widget" data-url="https://vikashrathee.typeform.com/to/EmBJPp" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> powered by <a href="https://admin.typeform.com/signup?utm_campaign=EmBJPp&utm_source=typeform.com-6341483-Basic&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN" style="color: #999" target="_blank">Typeform</a> </div>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+    <script>
+        function testApi() {
+            $.ajax({
+                type: "GET",
+                url: "/dev/api.ashx?" + $('#input_type option:selected').text() + "=" + $('#input_value').val() + "&apikey=" + $('#api_key').val(),
+                dataType: "json",
+                success: function (response) {
+                    $('#logs').removeClass('hidden');
+                    $('#logs').text(JSON.stringify(response, null, 4));
+                }
+            });
+        }
+        $(document).ready(function () {
+            $('.tabs-container').hide();
+            $('.tabs-container:eq(0)').show();
+            $('.language-list a').click(function () {
+                var target = "#" + $(this).data("target");
+                $(".tabs-container").not(target).hide();
+                $(target).show();
+            });
+        });
+        
+    </script>
+
+    </form>
+    <!-- Main menu navigation -->
+    <div id="jq-dropdown-apps" class="jq-dropdown jq-dropdown-tip">
+        <ul class="jq-dropdown-menu" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+            <li><a itemprop="url" href="/price-comparison-api.aspx"><i class="icon-cog"></i><span itemprop="name">API</span></a></li>
+            <li><a itemprop="url" href="/blog-widget.aspx"><i class="icon-html5"></i><span itemprop="name">Blog Widget</span></a></li>
+        </ul>
+    </div>
+    <div id="jq-dropdown-categories" class="jq-dropdown jq-dropdown-tip">
+        <div class="jq-dropdown-panel">
+            <div class="category-columns">
+                <ul class="category-list">
+                    <li>
+                        <h4><span></span>Mobiles &amp; Tablets</h4>
+                    </li>
+                    <li><a href="http://www.pricetree.com/mobile/87" title="Mobile Phones Prices">Mobiles <span></span></a></li>
+                    <li><a href="http://www.pricetree.com/tablet/24" title="Tablets Prices">Tablets <span></span></a></li>
+                    <li><a href="http://www.pricetree.com/laptop/45" title="Laptops Prices">Laptops <span></span></a></li>
+                    <li><a href="http://www.pricetree.com/television/9" title="Televisions Prices">TVs <span></span></a></li>
+                    <li><a href="http://www.pricetree.com/digital-camera/72" title="Digital Cameras Prices">Cameras <span></span></a></li>
+                </ul>
+                <ul class="category-list">
+                    <li>
+                        <h4><span></span>Popular Brands</h4>
+                    </li>
+                    <li><a href="http://www.pricetree.com/brands/samsung_mobile/87" title="Samsung Mobile Phones">Samsung</a></li>
+                    <li><a href="http://www.pricetree.com/brands/nokia_mobile/87" title="Nokia Mobile Phones">Nokia</a></li>
+                    <li><a href="http://www.pricetree.com/brands/lg_mobile/87" title="LG Mobile Phones">LG</a></li>
+                    <li><a href="http://www.pricetree.com/brands/micromax_mobile/87" title="Micromax Mobile Phones">Micromax</a></li>
+                    <li><a href="http://www.pricetree.com/brands/apple_mobile/87" title="Apple Mobile Phones">Apple</a></li>
+                    <li><a href="http://www.pricetree.com/brands/motorola_mobile/87" title="Motorola Mobile Phones">Motorola</a></li>
+                    <li><a href="http://www.pricetree.com/brands/htc_mobile/87" title="HTC Mobile Phones">HTC</a></li>
+                    <li><a href="http://www.pricetree.com/brands/sony_mobile/87" title="SONY Mobile Phones">SONY</a></li>
+                    <li><a href="http://www.pricetree.com/brands/blackberry_mobile/87" title="Blackberry Mobile Phones">Blackberry</a></li>
+                </ul>
+            </div>
+            <div class="category-columns">
+                <ul class="category-list">
+                    <li>
+                        <h4><span></span>Electronics &amp; More</h4>
+                    </li>
+                    <li><a href="http://www.pricetree.com/split-ac/18" title="AC (Air Conditions) Prices">ACs</a></li>
+                    <li><a href="http://www.pricetree.com/refrigerator/41" title="Refrigerators Prices">Refrigerators</a></li>
+                    <li><a href="http://www.pricetree.com/washing-machine/46" title="Washing Machines Prices">Washing Machines</a></li>
+                    <li><a href="http://www.pricetree.com/microwave-oven/89" title="Microwave Ovens Prices">Microwaves</a></li>
+                    <li><a href="http://www.pricetree.com/hard-disks/58" title="Hard Disks Prices">Hard Disks</a></li>
+                    <li><a href="http://www.pricetree.com/printer/56" title="Printers Prices">Printers</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="hero-banner" style="padding: 1px 0px;">
+       
+    </div>
+    <footer>
+        <div style="font-size: 18px;">
+            <div class="header-wrapper">
+                <div class="grid">
+                    <div class="row">
+                        <div class="span4">
+                            <h4>About</h4>
+                            <a class="footer-imp-links" title="About PriceTree" href="/about.aspx">About us</a>
+                            <a class="footer-imp-links" title="PriceTree Blog" href="/blog">Blog</a>
+                            <a class="footer-imp-links" title="Privacy Policy" href="/privacy.aspx">Terms of Use and Privacy Policy</a>
+
+                        </div>
+                        <div class="span3">
+                            <h4>Categories</h4>
+                            <a class="footer-imp-links" title="Mobile Phones" href="/mobile/87">Mobiles</a>
+                            <a class="footer-imp-links" title="Tablets" href="/tablet/24">Tablets</a>
+                            <a class="footer-imp-links" title="Laptops" href="/laptop/45">Laptops</a>
+                        </div>
+                        <div class="span4">
+                            <h4>Developers</h4>
+                            <a class="footer-imp-links" title="Price Comparison API" href="/price-comparison-api.aspx">API <sup class="small new">New</sup></a>
+                            <a class="footer-imp-links" title="Ecommerce Blog Widget" href="/blog-widget.aspx">Blog Widget</a>
+                        </div>
+                        <div class="span3">
+                            <h4>Support</h4>
+                            <a class="footer-imp-links" title="Frequently Asked Questions" href="/faq.aspx">FAQs</a>
+                            <a class="footer-imp-links" title="Contact us" href="/contact.aspx">Contact us</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="header-wrapper">
+                <p>
+                    PriceTree.com compare prices, reviews, rating and lots more!
+                </p>
+                <p>© 2016 PriceTree all rights reserved. ** PriceTree is not a shopping site(We don't sell anything) and does not charge any service fees to users of our site. PriceTree.com is not responsible for content, links of external websites, offers, images, price, product submitted by online users. In addition all logos, images, contents, name are trademarks of their respective owners.</p>
+                <p>&nbsp;</p>
+                <h1 id="footer-title"><span id="lblSEO"></span></h1>
+            </div>
+        </div>
+    </footer>    
+    <script type="text/javascript" src="//img.pricetree.com/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/styles/pricetree-desktop-v5.9.6.js"></script>
+    <script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script type="text/javascript">
+        function plusone_vote(obj) {
+            _gaq.push(['_trackEvent', 'plusone', obj.state]);
+        }
+        var _gaq = _gaq || [];
+        var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+        _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+        _gaq.push(['_setAccount', 'UA-38936652-1']);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['_trackPageLoadTime']);
+        _gaq.push(['_setSiteSpeedSampleRate', 100]);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+</html>
